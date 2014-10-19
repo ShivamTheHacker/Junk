@@ -1,0 +1,36 @@
+package PapaPong;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+
+public class Aimer {
+
+	private Game game;
+
+	public Aimer(Game game) {
+		this.game = game;
+	}
+
+	public void paint(Graphics2D g) {
+		int meetingPointX = 0;
+		int meetingPointY = 0;
+		g.setColor(Color.MAGENTA);
+		g.drawRect(game.racquet.x, game.racquet.y, game.racquet.WIDTH,
+				game.racquet.HEIGHT);
+		g.drawLine(game.ball.ballX, game.ball.ballY, meetingPointX,
+				meetingPointY);
+		g.drawLine(game.comPaddle.getComX(), game.comPaddle.getComY(),
+				meetingPointX, meetingPointY);
+		AffineTransform rotate = AffineTransform.getRotateInstance(
+				game.racquet.rotateAngle, game.racquet.x, game.racquet.y);
+		if (rotate != null) {
+			g.setTransform(rotate);
+		}
+		// AIMER
+		g.setColor(Color.RED);
+		g.drawLine(game.racquet.x + game.racquet.WIDTH / 2, game.racquet.y,
+				game.racquet.x + game.racquet.WIDTH / 2, game.racquet.y - 40);
+	}
+
+}

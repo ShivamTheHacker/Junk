@@ -1,0 +1,19 @@
+package PapaPong;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+
+public class Info {
+
+	private Game game = new Game();
+	
+	public Info(Game game) {
+		this.game = game;
+	}
+	
+	public void paint(Graphics2D g) {
+		
+	}
+
+	
+}

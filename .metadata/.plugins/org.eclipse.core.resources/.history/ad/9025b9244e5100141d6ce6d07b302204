@@ -1,0 +1,19 @@
+package PapaPong;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+
+public class Aimer {
+
+	private Game game;
+
+	public Aimer(Game game) {
+		this.game = game;
+	}
+
+	public void paint(Graphics2D g) {
+		g.setColor(Color.MAGENTA);
+	}
+
+}

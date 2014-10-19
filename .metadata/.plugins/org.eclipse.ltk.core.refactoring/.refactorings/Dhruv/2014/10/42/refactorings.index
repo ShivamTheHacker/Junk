@@ -1,0 +1,14 @@
+1413073040088	Rename method 'newGame'
+1413073084577	Rename method 'newGame'
+1413073941705	Rename method 'getFRAME_SPEED'
+1413074318336	Rename method 'randomizePositiveYSpeed'
+1413605675431	Copy compilation units
+1413643223868	Move compilation unit
+1413643241996	Rename type 'Menu'
+1413643246265	Move compilation unit
+1413647766592	Rename local variable 'x'
+1413647774639	Rename local variable 'y'
+1413647834634	Rename local variable 'x3'
+1413647843834	Rename local variable 'y3'
+1413648393392	Rename local variable 'newCoordinates'
+1413661533431	Rename field 'dimension'

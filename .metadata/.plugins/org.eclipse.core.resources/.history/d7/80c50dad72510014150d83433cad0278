@@ -1,0 +1,50 @@
+package Book;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class BookWord {
+
+	public static void main(String[] args) {
+		BufferedReader br = null;
+
+		try {
+
+			String sCurrentLine;
+
+			br = new BufferedReader(new FileReader(
+					"/Users/Shivam/Downloads/TheCatcherText.txt"));
+			List<Character> list = new ArrayList<Character>();
+			while ((sCurrentLine = br.readLine()) != null) {
+				char[] line = sCurrentLine.toCharArray();
+				for (int i = 0; i < line.length; i++) {
+					list = Arrays.asList(line[i]);
+					if (line[i] == ' ') {
+						list.remove(i);
+					}
+				}
+				char[] word = "Phony".toCharArray();
+				System.out.println(sCurrentLine);
+			}
+			
+			for (int k = 0; k < list.size(); k++) {
+				System.out.print(list.get(k));
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+	}
+}

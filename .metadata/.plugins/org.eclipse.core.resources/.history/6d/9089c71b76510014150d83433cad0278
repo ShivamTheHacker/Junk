@@ -1,0 +1,66 @@
+package Book;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BookWord {
+
+	public static void main(String[] args) {
+		BufferedReader br = null;
+
+		try {
+
+			String sCurrentLine;
+
+			br = new BufferedReader(new FileReader(
+					"/Users/Shivam/Downloads/TheCatcherText.txt"));
+			List<String[]> line = new ArrayList<String[]>();
+			while ((sCurrentLine = br.readLine()) != null) {
+				String[] arr = sCurrentLine.split("\\s+");
+				line.add(arr);
+				// System.out.println(sCurrentLine);
+			}
+
+			Map<String, Boolean> check = new HashMap<String, Boolean>();
+			for (int i = 0; i < line.size(); i++) {
+				for (int j = 0; j < line.get(i).length; j++) {
+					if (check.get(line.get(i)[j]) == false) {
+						check.put(line.get(i)[j], true);
+					}
+				}
+			}
+			List<String> total = new ArrayList<String>();
+			for (int i = 0; i < line.size(); i++) {
+				for (int j = 0; j < line.get(i).length; j++) {
+					if (check.get(line.get(i)[j]) == true) {
+						total.add(line.get(i)[j]);
+					}
+				}
+			}
+
+			for (int i = 0; i < line.size(); i++) {
+				for (int j = 0; j < line.get(i).length; j++) {
+					System.out.println(line.get(i)[j]);
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
+}
+/*
+ * if (sCurrentLine.contains(" ")) { sCurrentLine.replace(" ", "!"); }
+ */

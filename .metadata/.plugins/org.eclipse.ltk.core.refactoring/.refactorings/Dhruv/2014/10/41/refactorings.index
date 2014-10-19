@@ -1,0 +1,26 @@
+1412481629650	Move compilation unit
+1412970518181	Rename type 'Dimensions'
+1412972469732	Rename field 'bufferX'
+1413032499940	Move compilation unit
+1413032538561	Move compilation unit
+1413032583346	Copy package
+1413032604994	Copy compilation unit
+1413032637261	Delete element
+1413032643798	Delete element
+1413036742832	Rename method 'newGame'
+1413043655021	Rename type 'Racquet'
+1413043658457	Copy compilation unit
+1413044364982	Rename method 'upRotateAngle'
+1413044373300	Rename method 'downRotateAngle'
+1413044434544	Rename field 'x'
+1413044468234	Rename field 'xSpeed'
+1413044481498	Rename field 'ySpeed'
+1413044538570	Rename method 'goal'
+1413044588040	Rename field 'xSpeed'
+1413044597853	Rename field 'ySpeed'
+1413044610823	Move compilation unit
+1413048243759	Delete element
+1413069771447	Rename field 'x'
+1413069795303	Rename field 'xSpeed'
+1413069813805	Rename field 'y'
+1413069824457	Rename field 'ySpeed'

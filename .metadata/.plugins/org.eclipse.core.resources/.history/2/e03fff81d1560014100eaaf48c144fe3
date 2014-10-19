@@ -1,0 +1,58 @@
+/*
+______________________________________
+|\   ____\|\   __  \|\   ___ \|\  ___ \               
+\ \  \___|\ \  \|\  \ \  \_|\ \ \   __/|              
+ \ \  \    \ \  \\\  \ \  \ \\ \ \  \_|/__            
+  \ \  \____\ \  \\\  \ \  \_\\ \ \  \_|\ \           
+   \ \_______\ \_______\ \_______\ \_______\          
+    \|_______|\|_______|\|_______|\|_______|       
+ */
+
+package PapaPong;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class Main extends JPanel {
+
+	public void startHere() throws InterruptedException {
+		JFrame frame = new JFrame("Mini Tennis");
+		Game game = new Game();
+		frame.add(game);
+		frame.setSize(500, 825);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		JMenuBar jmb = new JMenuBar();
+
+		JMenu jmFile = new JMenu("File");
+		JMenuItem jmiOpen = new JMenuItem("Open");
+		JMenuItem jmiClose = new JMenuItem("Close");
+		JMenuItem jmiSave = new JMenuItem("Save");
+		JMenuItem jmiExit = new JMenuItem("Exit");
+		jmFile.add(jmiOpen);
+		jmFile.add(jmiClose);
+		jmFile.add(jmiSave);
+		jmFile.addSeparator();
+		jmFile.add(jmiExit);
+		jmb.add(jmFile);
+		frame.setJMenuBar(jmb);
+		
+		frame.setVisible(true);
+
+		while (true) {
+			game.move();
+			game.repaint();
+			Thread.sleep(game.getFrameSpeed());
+		}
+
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		new Main().startHere();
+	}
+
+}

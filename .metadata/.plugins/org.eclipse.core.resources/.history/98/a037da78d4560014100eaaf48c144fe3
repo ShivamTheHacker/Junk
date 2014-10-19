@@ -1,0 +1,19 @@
+package PapaPong;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+
+public class inGameMenu {
+
+	private Dimension dimension = new Dimension(this.getClass());
+
+	public void paint(Graphics2D g) {
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, dimension.WIDTH, dimension.wallWidth);
+		g.setColor(Color.WHITE);
+		g.fillRect(100, 0, 50, 20);
+		g.fillRect(225, 0, 50, 10);
+		g.fillRect(350, 0, 50, 10);
+	}
+
+}

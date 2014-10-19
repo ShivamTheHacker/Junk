@@ -1,0 +1,52 @@
+/*
+______________________________________
+|\   ____\|\   __  \|\   ___ \|\  ___ \               
+\ \  \___|\ \  \|\  \ \  \_|\ \ \   __/|              
+ \ \  \    \ \  \\\  \ \  \ \\ \ \  \_|/__            
+  \ \  \____\ \  \\\  \ \  \_\\ \ \  \_|\ \           
+   \ \_______\ \_______\ \_______\ \_______\          
+    \|_______|\|_______|\|_______|\|_______|       
+ */
+
+package PapaPong;
+
+public class Dimension {
+
+	/*
+	 * Make this class for all resources including color, dimensions, pics, etc.
+	 */
+	
+	Class c;
+	
+	public Dimension(Class c) {
+		this.c = c;
+	}
+
+	// GENERAL
+	public int WIDTH = 500;
+	public int HEIGHT = 778;
+	// FIELD
+	public int totalFieldWidth = WIDTH;
+	public int totalFIeldHeight = HEIGHT;
+	public int wallWidth = 20;
+	public int playableFieldWidth = WIDTH - wallWidth * 2;
+	public int playableFieldHeight = HEIGHT - wallWidth * 2;
+	public int bufferNormal = 2;
+	public int bufferExtreme = 52;
+	// SCORE
+	public int scoreFont = 60;
+	public int scoreX = wallWidth;
+	public int userScoreY = HEIGHT / 2 + wallWidth + scoreFont;
+	public int comScoreY = HEIGHT / 2 - scoreFont;
+	// GOAL
+	public int userGoalY = HEIGHT - wallWidth * 2;
+	public int comGoalY = 0;
+	public int goalHeight = wallWidth * 2;
+	public int goalWidth = WIDTH / 5;
+	public int goalOuterWidth = wallWidth / 2;
+	public int goalX = WIDTH / 2 - goalWidth / 2;
+	// RACQUET
+	public int racquetWidth = 60;
+	public int racquetHeight = wallWidth / 2;
+
+}

@@ -1,0 +1,21 @@
+package PapaPong;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+
+public class Aimer {
+
+	private Game game;
+
+	public Aimer(Game game) {
+		this.game = game;
+	}
+
+	public void paint(Graphics2D g) {
+		int meetingPointX = 0;
+		int meetingPointY = 0;
+		g.setColor(Color.MAGENTA);
+		g.drawLine(game.racquet.x, game.racquet.x, x2, y2);
+	}
+
+}
